@@ -1,0 +1,32 @@
+footer{
+   background-color: rgb(40, 40, 40);
+   position: absolute;
+   bottom: 0px;
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ 
+}
+
+body{
+    margin: 0;
+}
+
+hr{
+    width: 100%;
+   
+}
+
+p{
+    margin: 1px;
+}
+
+#iteam{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 0px;
+    width: 30%;
+}
