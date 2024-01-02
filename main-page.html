@@ -1,0 +1,101 @@
+<div class="main">
+    <div class="ad"> <img src="/images/реклама.png"> </div>
+    <div class="form">
+        <center> <h1 id="form-h1"> Куди бажаєте летіти? </h1> </center>
+        <form>
+            <p> Оберіть пункт вильоту: </p>
+            <select>
+                <option value="KBP"> KBP, Kyiv Boryspil International Airport </option>
+                <option value="IEV"> IEV, Kyiv Zhuliany Airport </option>
+                <option value="LWO"> LWO, Lviv Danylo Halytskyi International Airport </option>
+                <option value="HRK"> HRK, Kharkiv International Airport </option>
+                <option value="ODS"> ODS, Odesa International Airport </option>
+            </select>
+            <p> Оберіть пункт призначення: </p>
+            <select>
+                <option value=""></option>
+                <option value=""></option> <!-- ТУТ МАЮТЬ БУТИ АЕРОПОРТИ ПРИЗНАЧЕННЯ -->
+                <option value=""></option>
+            </select>
+            <p> Оберіть кількість подорожуючих: </p>
+            <input type="number" min="1" max="189"> <!-- баг з довжиною рядка -->
+        </form>
+    </div>
+    <div class="ad"> <img src="/images/реклама.png"> </div>
+    <div class="ad"> <img src="/images/реклама.png"> </div>
+    <div class="info">
+        <p> Найкращі пропозиції: </p>
+
+        <!-- ТУТ МАЮТЬ БУТИ КАРТКИ -->
+
+    </div>
+    <div class="ad"> <img src="/images/реклама.png"> </div>
+</div>
+
+
+<style>
+    @import url(style.css);
+
+    * {
+       margin: 0;
+       padding: 0; 
+    }
+
+    body {
+        background-color: var(--color1);
+    }
+
+    .main {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+        grid-auto-rows: auto;
+    }
+
+    .ad {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        border: 1px solid var(--color2);
+    }
+
+    .ad img {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        object-fit: cover;
+    }
+
+    #form-h1 {
+        font-family: var(--font1);
+        color: var(--color3);
+        font-size: 60px;
+        font-style: italic;
+        margin: 20px;
+        
+    }
+
+    p {
+        color: var(--color4);
+        font-family: var(--font2);
+        font-size: 20px;
+    }
+
+    .form, .info {
+        padding: 10px;
+        border-top: 1px solid var(--color2);
+        border-bottom: 1px solid var(--color2);
+    }
+
+    select, input {
+        width: 100%;
+        padding: 3px;
+        background-color: var(--color1);
+        border: 2px solid var(--color2);
+        color: var(--color4);
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+</style>
