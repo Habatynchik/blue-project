@@ -1,26 +1,49 @@
-<div class="window">
-    <h1> Вхід в акаунт </h1>
-    <h3> оберіть спосіб </h3>
-    <hr>
-    <form>
-        <p> Введіть адресу електронної пошти </p>
-        <input type="email">
-        <p> Введіть пароль </p>
-        <input type="text">
-        <button type="submit"> Увійти </button>
-        <button type="submit"> Зареєструватись </button>
-        <p class="or"> або </p>
-        <div class="btn google">
-            <img src="" alt="Google">
-            <p> Увійти з Google </p>
-        </div>
-        <div class="btn facebook">
-            <img src="" alt="Facebook">
-            <p> Увійти з Facebook </p>
-        </div>
-    </form>
+<div class="window" style="display: none;">
+  <h1>Вхід в акаунт</h1>
+  <h3>оберіть спосіб</h3>
+  <hr />
+  <form>
+    <p>Введіть адресу електронної пошти</p>
+    <input type="email" />
+    <p>Введіть пароль</p>
+    <input type="text" />
+    <button type="submit">Увійти</button>
+    <button type="submit">Зареєструватись</button>
+    <p class="or">або</p>
+    <div class="btn google">
+      <img src="" alt="Google" />
+      <p>Увійти з Google</p>
+    </div>
+    <div class="btn facebook">
+      <img src="" alt="Facebook" />
+      <p>Увійти з Facebook</p>
+    </div>
+  </form>
+
+  <script src="btn.js" defer></script>
 </div>
 
 <style>
+  .window {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(155, 155, 155, 0.8);
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .window form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: blueviolet;
+    width: 50%;
+    height: 50%;
+  }
 </style>
