@@ -14,7 +14,6 @@ for (i = 0; i < z.length; i++) {
         if (this.status === 404) {elmnt.innerHTML = "Page not found.";}
         /* Remove the attribute, and call this function once more: */
         elmnt.removeAttribute("src");
-        includeHTML();
       }
     }
     xhttp.open("GET", file, true);
