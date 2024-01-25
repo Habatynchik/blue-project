@@ -13,20 +13,83 @@
             </select>
             <p> Оберіть пункт призначення: </p>
             <select>
-                <option value=""></option>
-                <option value=""></option> <!-- ТУТ МАЮТЬ БУТИ АЕРОПОРТИ ПРИЗНАЧЕННЯ -->
-                <option value=""></option>
+                <option value="AMS"> AMS, Amsterdam Schiphol Airport </option>
+                <option value="ATH"> ATH, Athens Eleftherios Airport</option> <!-- ТУТ МАЮТЬ БУТИ АЕРОПОРТИ ПРИЗНАЧЕННЯ -->
+                <option value="AYT"> AYT, Antalya Airport </option>
+                <option value="ARN"> ARN, Stockholm Arlanda Airport </option>
+                <option value="BCN"> BCN, Barcelona El Prat Airport </option>
+                <option value="BUD"> BUD, Budapest Ferenc Liszt International Airport </option>
+                <option value="BER"> BER, Berlin Brandenburg Airport </option>
+                <option value="BRU"> BRU, Brussels Airport </option>
+                <option value="BTS"> BTS, Bratislava M. R. Stefanik Airport </option>
+                <option value="CDG"> CDG, Brussels Airport </option>
+                <option value="CPH"> CPH, Paris Charles de Gaulle Airport </option>
+                <option value="DUB"> DUB, Dublin Airport </option>
+                <option value="DUS"> DUS, Dusseldorf International Airport </option>
+                <option value="FCO"> FCO, Rome Leonardo da Vinci Fiumicino Airport </option>
+                <option value="HAM"> HAM, Hamburg Airport </option>
+                <option value="HEL"> HEL, Helsinki Vantaa Airport </option>
+                <option value="HRG"> HRG, Hurghada International Airport </option>
+                <option value="INN"> INN, Innsbruck Kranebitten Airport </option>
+                <option value="IST"> IST, Istanbul Airport </option>
+                <option value="KRK"> KRK, Krakow John Paul II International Airport </option>
+                <option value="LGW"> LGW, London Gatwick Airport </option>
+                <option value="LIS"> LIS, Lisbon Humberto Delgado Airport </option>
+                <option value="MAD"> MAD, Madrid Barajas Airport </option>
+                <option value="MUC"> MUC, Munich Airport </option>
+                <option value="OSL"> OSL, Oslo Gardermoer Airport </option>
+                <option value="PRG"> PRG, Prague Vaclav Havel Airport </option>
+                <option value="RIX"> RIX, Riga International Airport </option>
+                <option value="SSH"> SSH, Sharm-el-Sheikh International Airport </option>
+                <option value="TFS"> TFS, Tenerife South Airport </option>
+                <option value="TGD"> TGD, Podgorica Airport </option>
+                <option value="TIV"> TIV, Tivat Airport </option>
+                <option value="TLL"> TLL, Tallin Lennart Meri Airport </option>
+                <option value="VCE"> VCE, Venice Marco Polo Airport </option>
+                <option value="VIE"> VIE, Vienna International Airport </option>
+                <option value="VNO"> VNO, Vilnius International Airport </option>
+                <option value="WAW"> WAW, Warsaw Chopin Airport </option>
+                <option value="ZAG"> ZAG, Zagreb Franjo Tudman Airport </option>
+                <option value="ZRH"> ZRH, Zurich Airport </option>
             </select>
             <p> Оберіть кількість подорожуючих: </p>
-            <input type="number" min="1" max="189"> <!-- баг з довжиною рядка -->
+            <input type="number" min="1" max="189">
         </form>
     </div>
     <div class="ad"> <img src="/images/реклама.png"> </div>
     <div class="ad"> <img src="/images/реклама.png"> </div>
     <div class="info">
         <p> Найкращі пропозиції: </p>
-
-        <!-- ТУТ МАЮТЬ БУТИ КАРТКИ -->
+        <div class="cards">
+            <div class="card card1">
+                <p> Київ (КВР) - Лондон (LGW) </p>
+                <hr>
+                <p> 2992 грн </p>
+                <img src="https://travel.24tv.ua/resources/photos/news/202108/1718050.jpg?v=1661260578000&w=1200&h=675&fit=cover&output=webp&q=50" alt="London">
+                <button> Купити зараз </button>
+            </div>
+            <div class="card card2">
+                <p> Львів (LWO) - Стамбул (IST) </p>
+                <hr>
+                <p> 3804 грн </p>
+                <img src="https://www.citiesabc.com/wp-content/uploads/2020/04/Istanbul-min.jpg" alt="Istanbul">
+                <button> Купити зараз </button>
+            </div>
+            <div class="card card3">
+                <p> Одеса (ODS) - Прага (PRG) </p>
+                <hr>
+                <p> 2668 грн </p>
+                <img src="https://thumbs.dreamstime.com/b/stary-tramwaje-na-mo%C5%9Bcie-w-pradze-praga-czechy-pa%C5%BAdziernika-r-tramwaj-torach-przeje%C5%BCd%C5%BCaj%C4%85cych-przez-most-i-zamek-praski-jest-171700958.jpg" alt="Prague">
+                <button> Купити зараз </button>
+            </div>
+            <div class="card card3">
+                <p> Харків (HRK) - Краків (KRK) </p>
+                <hr>
+                <p> 574 грн </p>
+                <img src="https://cdn.tripster.ru/thumbs2/963e9526-8f06-11ec-a154-aeaeb908c025.800x600.jpeg" alt="Krakow">
+                <button> Купити зараз </button>
+            </div>
+        </div>
 
     </div>
     <div class="ad"> <img src="/images/реклама.png"> </div>
@@ -96,6 +159,47 @@
         color: var(--color4);
         font-size: 20px;
         margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        width: calc(100% - 10px);
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .card {
+        position: relative;
+        width: 23.5%;
+        border: 2px solid var(--color2);
+        border-radius: 5px;
+        padding: 0;
+    }
+
+    .card img {
+        position: relative;
+        object-fit: cover;
+        width: 100%;
+        height: 100px;
+    }
+
+    .card p {
+        margin: 5px;
+    }
+
+    .card button {
+        width: 100%;
+        height: 60px;
+        font-size: 25px;
+        background-color: var(--color1);
+        color: var(--color3);
+        font-family: var(--font2);
+        border: none;
         margin-bottom: 5px;
     }
 </style>
